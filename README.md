@@ -219,15 +219,10 @@ The replenishment allocation problem determines the optimal shipment quantities 
 Minimize transportation and shortage costs:
 
 $$
-\min Z
-======
-
-\sum_{p \in P}
-\sum_{d \in D}
-c_{pd}x_{pd}
+\min Z =
+\sum_{p \in P}\sum_{d \in D} c_{pd}x_{pd}
 +
-\sum_{d \in D}
-Mu_d
+\sum_{d \in D} M u_d
 $$
 
 ---
@@ -309,7 +304,7 @@ where:
 
 $$
 D(R_k)
-======
+=
 
 \sum_{i=0}^{n}
 Dist_{i,i+1}
@@ -362,7 +357,7 @@ $$
 
 $$
 TC_{Plant}
-==========
+=
 
 \sum_{p \in P}
 \sum_{d \in D}
@@ -375,7 +370,7 @@ $$
 
 $$
 TC_{LastMile}
-=============
+=
 
 \sum_{k \in K}
 D(R_k)C_{km}
@@ -402,7 +397,7 @@ $$
 
 $$
 FillRate
-========
+=
 
 \frac{FulfilledDemand}
 {TotalDemand}
@@ -415,7 +410,7 @@ $$
 
 $$
 Savings
-=======
+=
 
 \frac
 {
@@ -433,7 +428,7 @@ $$
 
 $$
 StockoutReduction
-=================
+=
 
 \frac
 {
@@ -451,7 +446,7 @@ $$
 
 $$
 VehicleUtilization
-==================
+=
 
 \frac
 {
@@ -502,35 +497,6 @@ $$
 
 ---
 
-# 📂 Repository Structure
-
-```text
-ev-battery-supply-chain-optimization/
-
-│
-├── README.md
-├── notebook.ipynb
-│
-├── src/
-│   └── optimizer.py
-│
-├── data/
-│   └── demand_data.csv
-│
-├── outputs/
-│   ├── kpi_summary.csv
-│   ├── baseline_results.csv
-│   └── optimized_results.csv
-│
-└── figures/
-    ├── supply_chain_network.png
-    ├── fill_rate_comparison.png
-    ├── cost_comparison.png
-    └── routing_map.png
-```
-
----
-
 # 🚀 Installation
 
 ```bash
@@ -542,19 +508,8 @@ pip install numpy pandas scipy pulp matplotlib
 # ▶️ Run
 
 ```bash
-python src/optimizer.py
+python optimizer.py
 ```
 
 ---
 
-# 📄 Resume Bullet
-
-**EV Battery Multi-Echelon Supply Chain Optimisation:** Optimized a 3-plant, 5-distribution-center, 40-dealer EV battery supply chain using (s,S) inventory policies, network-flow MILP, and last-mile vehicle routing optimization. Improved fill rate from 81% to 95% while reducing inventory, transportation, and stockout costs, projecting approximately 30% annual supply chain savings.
-
----
-
-# 👨‍💻 Author
-
-**Vikram Gupta**
-
-PhD Researcher | Operations Research | Supply Chain Analytics | Optimization | AI for Manufacturing
