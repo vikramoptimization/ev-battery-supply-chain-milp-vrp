@@ -303,11 +303,7 @@ where:
 ## Route Distance
 
 $$
-D(R_k)
-=
-
-\sum_{i=0}^{n}
-Dist_{i,i+1}
+D(R_k)=\sum_{i=0}^{n} Dist_{i,i+1}
 $$
 
 ---
@@ -315,9 +311,7 @@ $$
 ## Routing Objective
 
 $$
-\min
-\sum_{k \in K}
-D(R_k)
+\min \sum_{k \in K} D(R_k)
 $$
 
 ---
@@ -327,16 +321,7 @@ $$
 The total supply chain cost is:
 
 $$
-TC
-==
-
-HC
-+
-TC_{Plant}
-+
-TC_{LastMile}
-+
-SC
+TC = HC + TC_{Plant} + TC_{LastMile} + SC
 $$
 
 ---
@@ -344,11 +329,7 @@ $$
 ## Inventory Holding Cost
 
 $$
-HC
-==
-
-\sum_{d \in D}
-h_dI_d
+HC=\sum_{d \in D} h_d I_d
 $$
 
 ---
@@ -356,12 +337,7 @@ $$
 ## Plant-to-DC Transportation Cost
 
 $$
-TC_{Plant}
-=
-
-\sum_{p \in P}
-\sum_{d \in D}
-c_{pd}x_{pd}
+TC_{Plant}=\sum_{p \in P}\sum_{d \in D} c_{pd}x_{pd}
 $$
 
 ---
@@ -369,11 +345,7 @@ $$
 ## Last-Mile Transportation Cost
 
 $$
-TC_{LastMile}
-=
-
-\sum_{k \in K}
-D(R_k)C_{km}
+TC_{LastMile}=\sum_{k \in K} D(R_k)C_{km}
 $$
 
 ---
@@ -381,12 +353,7 @@ $$
 ## Stockout Cost
 
 $$
-SC
-==
-
-Penalty
-\times
-StockoutUnits
+SC=Penalty \times StockoutUnits
 $$
 
 ---
@@ -396,12 +363,9 @@ $$
 ## Fill Rate
 
 $$
-FillRate
-=
-
-\frac{FulfilledDemand}
-{TotalDemand}
-\times100
+FillRate=
+\frac{FulfilledDemand}{TotalDemand}
+\times 100
 $$
 
 ---
@@ -409,17 +373,10 @@ $$
 ## Cost Savings
 
 $$
-Savings
-=
-
-\frac
-{
-TC_{Baseline}-TC_{Optimized}
-}
-{
-TC_{Baseline}
-}
-\times100
+Savings=
+\frac{TC_{Baseline}-TC_{Optimized}}
+{TC_{Baseline}}
+\times 100
 $$
 
 ---
@@ -427,17 +384,10 @@ $$
 ## Stockout Reduction
 
 $$
-StockoutReduction
-=
-
-\frac
-{
-Stockout_{Baseline}-Stockout_{Optimized}
-}
-{
-Stockout_{Baseline}
-}
-\times100
+StockoutReduction=
+\frac{Stockout_{Baseline}-Stockout_{Optimized}}
+{Stockout_{Baseline}}
+\times 100
 $$
 
 ---
@@ -445,19 +395,11 @@ $$
 ## Vehicle Utilization
 
 $$
-VehicleUtilization
-=
-
-\frac
-{
-ActualLoad
-}
-{
-VehicleCapacity
-}
-\times100
+VehicleUtilization=
+\frac{ActualLoad}
+{VehicleCapacity}
+\times 100
 $$
-
 ---
 
 # 📈 Results
